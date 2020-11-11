@@ -37,7 +37,6 @@ const expenseApp = () => {
   }  
  
  
- 
  const deleteApp = (e) =>{
    let some = e.target.className;
     array.forEach((lists) =>{
@@ -60,9 +59,6 @@ const expenseApp = () => {
       
       }     
   });
-  
-       
-  
 } 
  
 allExpenses.addEventListener('click', deleteApp);
