@@ -21,15 +21,15 @@ const expenseApp = () => {
  
    const arrayObj = array.map(items => {
      return `<div class="description">
-                ${items.desc} : ${items.amt}
-                <button class=${items.classname}> X </button>
+                <p>${items.desc}</p> <p>${items.amt}</p>
+                <button class=${items.classname}><i class="far fa-trash-alt"></i></button>
               </div>`});
  
               
   const arrayObjJoin = arrayObj.join('');
   allExpenses.innerHTML = arrayObjJoin;  
   totalAmount += amountEl;
-  result.textContent = "Total:" + totalAmount;
+  result.textContent = "Total Expense : " + totalAmount;
   
   expense.value = "";
   amount.value = "";
@@ -42,15 +42,15 @@ const expenseApp = () => {
     array.forEach((lists) =>{
        if(lists.classname === some){
           totalAmount = totalAmount - lists.amt;
-          result.textContent = "Total:" + totalAmount;
+          result.textContent = "Total Expense : " + totalAmount;
       
       const arrayIndex = array.findIndex((x)=> x.classname === some);
       array.splice(arrayIndex, 1);
       
       const arrayFiltered = array.map(items =>{
        return `<div class="description">
-                ${items.desc} : ${items.amt}
-                <button class=${items.classname}> X </button>
+                <p>${items.desc}</p> </p>${items.amt}</p>
+                <button class=${items.classname}> <i class="far fa-trash-alt"></i> </button>
               </div>`;
      });
       
