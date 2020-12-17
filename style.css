@@ -81,8 +81,13 @@ body{
     border: solid 1px red;
     padding: 3px 4px;
     color: red;
+    cursor: pointer;
   }
-  
+
+  button i{
+    pointer-events:none;
+  }
+
 
   @media (max-width: 750px){
     .containers{
